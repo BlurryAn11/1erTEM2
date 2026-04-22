@@ -34,7 +34,6 @@ def index():
     conn.close()
     return render_template("index.html", productos=productos)
 
-# AGREGAR
 @app.route('/agregar', methods=['GET','POST'])
 def agregar():
     if request.method == 'POST':
@@ -53,7 +52,6 @@ def agregar():
 
     return render_template("agregar.html")
 
-# EDITAR
 @app.route('/editar/<int:id>', methods=['GET','POST'])
 def editar(id):
     conn = conectar()
